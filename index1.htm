@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsive design for mobile devices -->
+    <title>Improved Layout</title> <!-- Title displayed on the browser tab -->
+    <style>
+        * {
+            margin: 0; /* Reset margin for all elements */
+            padding: 0; /* Reset padding for all elements */
+            font-family: Arial, Helvetica, sans-serif; /* Set default font */
+            box-sizing: border-box; /* Include padding and border in element's width and height */
+        }
+
+        header {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space items evenly with equal distance */
+            align-items: center; /* Align items vertically */
+            background-color: #333; /* Dark background color for the header */
+            color: aliceblue; /* Light text color for contrast */
+            padding: 10px 20px; /* Add spacing inside the header */
+        }
+
+        .logo img {
+            width: 50px; /* Set logo width */
+            height: 50px; /* Set logo height */
+        }
+
+        .header_content h1 {
+            font-size: 24px; /* Header font size */
+            margin-bottom: 5px; /* Add spacing below the header */
+        }
+
+        .submenu {
+            position: relative; /* Required for positioning the dropdown menu */
+        }
+
+        nav {
+            background-color: grey; /* Background color for navigation bar */
+            padding: 10px 0; /* Vertical padding for navigation bar */
+        }
+
+        .nav1 {
+            display: flex; /* Use flexbox for navigation items */
+            justify-content: space-between; /* Space navigation items evenly */
+            list-style: none; /* Remove bullet points from navigation */
+        }
+
+        .nav1 li {
+            margin: 0 15px; /* Add horizontal spacing between items */
+        }
+
+        .nav1 a {
+            color: white; /* Set link color */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 18px; /* Set link font size */
+            padding: 5px 10px; /* Add padding around the link */
+        }
+
+        .nav1 a:hover {
+            background-color: #555; /* Change background color on hover */
+            border-radius: 5px; /* Add rounded corners on hover */
+        }
+
+        .submenu_content {
+            display: none; /* Initially hide the dropdown menu */
+            position: absolute; /* Position relative to .submenu */
+            top: 100%; /* Position directly below the parent menu */
+            left: 0; /* Align dropdown menu to the left */
+            background-color: grey; /* Background color for dropdown */
+            list-style: none; /* Remove bullet points */
+            padding: 10px 0; /* Add vertical padding inside the dropdown */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+        }
+
+        .submenu_content li {
+            margin: 5px 15px; /* Add spacing inside dropdown items */
+        }
+
+        .submenu_content a {
+            color: white; /* Set link color for dropdown items */
+            text-decoration: none; /* Remove underline for dropdown links */
+            padding: 5px 10px; /* Add padding around dropdown links */
+        }
+
+        .submenu_content a:hover {
+            background-color: #555; /* Change background color for dropdown items on hover */
+            border-radius: 5px; /* Add rounded corners on hover */
+        }
+
+        .submenu:hover .submenu_content {
+            display: block; /* Show the dropdown menu on hover */
+        }
+
+        main {
+            padding: 20px; /* Add spacing around the main content */
+            font-size: 18px; /* Set font size for main content */
+        }
+
+        footer {
+            background-color: #333; /* Dark background for footer */
+            color: aliceblue; /* Light text color for contrast */
+            text-align: center; /* Center align footer content */
+            padding: 10px 0; /* Add vertical spacing inside footer */
+            margin-top: 20px; /* Add spacing above the footer */
+        }
+
+        .footer-links a {
+            color: aliceblue; /* Footer link color */
+            text-decoration: none; /* Remove underline for footer links */
+            margin: 0 10px; /* Add horizontal spacing between links */
+            transition: color 0.3s; /* Smooth transition effect for hover */
+        }
+
+        .footer-links a:hover {
+            color: #00bcd4; /* Change link color on hover */
+            width: 20px; /* Optional: Add hover effect (may not work as intended) */
+            height: auto;
+            background-color: cadetblue; /* Add background color on hover */
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="#" alt="Company Logo"> <!-- Placeholder for the logo -->
+    </div>
+    <div class="header_content">
+        <h1>Company Name</h1> <!-- Company name in the header -->
+        <p>Welcome to our website</p> <!-- Subtitle or welcome message -->
+    </div>
+  </header>  
+
+  <nav>
+    <ul class="nav1">
+        <li><a href="#">Home</a></li> <!-- Link to the home page -->
+        <li class="submenu">
+            <a href="#">Department</a> <!-- Parent menu item -->
+            <ul class="submenu_content">
+                <li><a href="#">Sub 1</a></li> <!-- Dropdown menu item -->
+                <li><a href="#">Sub 2</a></li> <!-- Dropdown menu item -->
+            </ul>
+        </li>
+        <li><a href="#">About</a></li> <!-- Link to about page -->
+        <li><a href="#">Contact</a></li> <!-- Link to contact page -->
+    </ul>
+  </nav>
+
+  <main>
+    <h2>About Us</h2> <!-- Section heading -->
+    <p>Welcome to our company. We provide excellent services and solutions to meet your needs.</p> <!-- Main content -->
+  </main>
+
+  <footer>
+    <div class="footer-links">
+        <a href="#">Link 1</a> <!-- Footer link -->
+        <a href="#">Link 2</a> <!-- Footer link -->
+    </div>
+    <p>&copy 2024 Company Name. All rights reserved.</p> <!-- Copyright notice -->
+  </footer>
+</body>
+</html>
